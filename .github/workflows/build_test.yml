@@ -39,4 +39,4 @@ jobs:
           CHROMEWEBDRIVER: /usr/bin/google-chrome
         run: |
           echo "Running TestProject${{matrix.versions}} tests"
-          dotnet test TestProject${{matrix.versions}}/TestProject${{matrix.versions}}.cproj --verbosity normal
+          dotnet test TestProject${{matrix.versions}}.cproj --verbosity normal
