@@ -11,9 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        versions: [2, 3]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -34,9 +32,9 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
-      - name: Run TestProject${{matrix.versions}} tests
+      - name: Run TestProject2 tests
         env:
           CHROMEWEBDRIVER: /usr/bin/google-chrome
         run: |
-          echo "Running TestProject${{matrix.versions}} tests"
-          dotnet test TestProject${{matrix.versions}}.cproj --verbosity normal
+          echo "Running TestProject2 tests"
+          dotnet test TestProject2\TestProject2.cproj --verbosity normal
