@@ -1,8 +1,5 @@
 pipeline {
 	agent any
-	triggers{
-		pollScm('* * * * *')
-	}
 	stages {
 		stage('Restor NuGet packages') {
 			steps {
