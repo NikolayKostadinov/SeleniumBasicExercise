@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent anygit
 	stages {
 		stage('Restor NuGet packages') {
 			steps {
